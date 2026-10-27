@@ -35,11 +35,6 @@ export default function ProvinceMap({ map }: { map: MapData }) {
     >
       <title id="mt">Mapa de las ocho provincias de Andalucía</title>
       <desc id="md">Las ocho provincias de Andalucía tienen fichas de ejemplo.</desc>
-      <defs>
-        <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <line x1="0" y1="0" x2="0" y2="9" stroke="#1d2a35" strokeOpacity=".28" strokeWidth="1.6" />
-        </pattern>
-      </defs>
       {map.lon.map(([v, x]) => (
         <g key={`lon${v}`}>
           <line x1={x} y1={10} x2={x} y2={map.h - 10} className="gr" />
@@ -58,7 +53,6 @@ export default function ProvinceMap({ map }: { map: MapData }) {
           <Link key={p.slug} href={`/${p.slug}`} className="pv-a" aria-label={label} onMouseEnter={() => point(p.name)}>
             <title>{label}</title>
             <path d={p.d} className={`pv pv-on${active === p.name ? ' pv-def' : ''}`} />
-            <path className="pv-hatch" d={p.d} />
           </Link>
         );
       })}

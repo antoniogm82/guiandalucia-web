@@ -1004,16 +1004,14 @@ footer .fsoc-l{margin-top:18px;color:var(--fg);font-weight:500;font-size:.92rem}
 .sw-n{background:repeating-linear-gradient(45deg,transparent 0 3px,#0a0a0a40 3px 4px)}
 .hs-cr{font-size:.78rem;color:var(--muted);margin:4px 0 0}
 .mapa-svg .gr{stroke:#2a6fb0;stroke-opacity:.3;stroke-width:1}
-.mapa-svg .tick{font-family:var(--mono);font-size:24px;fill:#2a6fb0}
+.mapa-svg .tick{font-family:var(--mono);font-size:24px;fill:#d33b25}
 .mapa-svg .pv{stroke:#1d2a35;stroke-width:1.6;stroke-linejoin:round}
 .mapa-svg .pv-off{fill:url(#hatch)}
 .mapa-svg .pv-on{fill:#fff;stroke-width:2;transition:fill .16s var(--ease),stroke-width .16s var(--ease)}
 .mapa-svg .pv-a{cursor:pointer}
 .mapa-svg .pv-def{fill:var(--mint)}
-.mapa-svg .pv-hatch{fill:url(#hatch);stroke:none;pointer-events:none;transition:opacity .45s var(--ease)}
-.mapa-svg .pv-def+.pv-hatch{opacity:0}
-@media (hover:hover){.mapa-svg:has(.pv-a:hover) .pv-def,.mapa-svg:has(.pv-a:focus-visible) .pv-def{fill:#fff}.mapa-svg:has(.pv-a:hover) .pv-def+.pv-hatch,.mapa-svg:has(.pv-a:focus-visible) .pv-def+.pv-hatch{opacity:1}.mapa-svg .pv-a:hover .pv-on,.mapa-svg .pv-a:hover .pv-on.pv-def{fill:var(--mint);stroke-width:3.4}.mapa-svg .pv-a:hover .pv-hatch,.mapa-svg .pv-a:hover .pv-def+.pv-hatch{opacity:0}}
-.mapa-svg .pv-a:focus-visible{outline:none}.mapa-svg .pv-a:focus-visible .pv-on,.mapa-svg .pv-a:focus-visible .pv-on.pv-def{stroke-width:5;fill:var(--mint)}.mapa-svg .pv-a:focus-visible .pv-hatch,.mapa-svg .pv-a:focus-visible .pv-def+.pv-hatch{opacity:0}
+@media (hover:hover){.mapa-svg:has(.pv-a:hover) .pv-def,.mapa-svg:has(.pv-a:focus-visible) .pv-def{fill:#fff}.mapa-svg .pv-a:hover .pv-on,.mapa-svg .pv-a:hover .pv-on.pv-def{fill:var(--mint);stroke-width:3.4}}
+.mapa-svg .pv-a:focus-visible{outline:none}.mapa-svg .pv-a:focus-visible .pv-on,.mapa-svg .pv-a:focus-visible .pv-on.pv-def{stroke-width:5;fill:var(--mint)}
 .mapa-svg .pl{font-family:"Barlow Condensed","Arial Narrow",sans-serif;font-weight:600;font-size:40px;letter-spacing:.06em;text-transform:uppercase;fill:#1d2a35;paint-order:stroke;stroke:var(--bg);stroke-width:5px;stroke-linejoin:round;pointer-events:none}
 .mapa-svg .pl-on{font-weight:700}
 .mapa-svg .dt{fill:#1d2a35;stroke:var(--bg);stroke-width:2}
