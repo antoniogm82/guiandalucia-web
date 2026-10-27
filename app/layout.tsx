@@ -39,7 +39,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="app" tabIndex={-1}>{children}</main>
         <SiteFooter />
-        <div className="scrim" id="scrim" hidden />
         <div className="toast" id="toast" role="status" aria-live="polite" />
         <ChromeEffects />
       </body>

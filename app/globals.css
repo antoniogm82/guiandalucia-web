@@ -365,6 +365,7 @@ p{text-wrap:pretty}
 /* ---- cabecera centrada y búsqueda con velo (patrón Tripadvisor) ---- */
 .scrim{position:fixed;inset:0;z-index:55;background:rgba(10,10,10,.45);opacity:0;transition:opacity .18s var(--ease)}
 .scrim.on{opacity:1}
+.scrim:not(.on){pointer-events:none}
 .scrim[hidden]{display:none}
 .search{scroll-margin-top:calc(var(--hh) + 16px)}
 .search.open{z-index:60}

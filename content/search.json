@@ -1,0 +1,219 @@
+{
+ "tabs": [
+  {
+   "cat": "",
+   "sub": "",
+   "icon": "ph-compass",
+   "label": "Todo"
+  },
+  {
+   "cat": "alojamientos",
+   "sub": "",
+   "icon": "ph-bed",
+   "label": "Alojamientos"
+  },
+  {
+   "cat": "restaurantes",
+   "sub": "",
+   "icon": "ph-fork-knife",
+   "label": "Restaurantes"
+  },
+  {
+   "cat": "actividades",
+   "sub": "",
+   "icon": "ph-ticket",
+   "label": "Ocio"
+  },
+  {
+   "cat": "actividades",
+   "sub": "Visitas guiadas",
+   "icon": "ph-map-trifold",
+   "label": "Visitas guiadas"
+  },
+  {
+   "cat": "alojamientos",
+   "sub": "Rural en la Alpujarra",
+   "icon": "ph-mountains",
+   "label": "Rural"
+  },
+  {
+   "cat": "actividades",
+   "sub": "Con niños",
+   "icon": "ph-balloon",
+   "label": "En familia"
+  }
+ ],
+ "fields": {
+  "0": [
+   {
+    "type": "t",
+    "name": "q",
+    "label": "Qué",
+    "icon": "ph-magnifying-glass",
+    "placeholder": "Tapas, casa cueva, free tour…"
+   }
+  ],
+  "1": [
+   {
+    "type": "s",
+    "name": "tipo",
+    "label": "Tipo de alojamiento",
+    "icon": "ph-bed",
+    "options": [
+     "Cualquiera",
+     "Hotel",
+     "Hostal o pensión",
+     "Apartamento turístico",
+     "Casa rural",
+     "Casa cueva",
+     "Camping"
+    ]
+   },
+   {
+    "type": "s",
+    "name": "servicios",
+    "label": "Servicios",
+    "icon": "ph-list-checks",
+    "options": [
+     "Cualquiera",
+     "Aparcamiento",
+     "Admite mascotas",
+     "Accesible",
+     "Piscina",
+     "Desayuno"
+    ]
+   }
+  ],
+  "2": [
+   {
+    "type": "s",
+    "name": "cocina",
+    "label": "Cocina",
+    "icon": "ph-cooking-pot",
+    "options": [
+     "Cualquiera",
+     "Tapas",
+     "Andaluza",
+     "Mariscos",
+     "Vegetariana"
+    ]
+   },
+   {
+    "type": "s",
+    "name": "opciones",
+    "label": "Opciones",
+    "icon": "ph-list-checks",
+    "options": [
+     "Cualquiera",
+     "Terraza",
+     "Sin gluten",
+     "Vegetariana",
+     "Accesible",
+     "Admite mascotas"
+    ]
+   }
+  ],
+  "3": [
+   {
+    "type": "s",
+    "name": "plan",
+    "label": "Tipo de plan",
+    "icon": "ph-ticket",
+    "options": [
+     "Cualquiera",
+     "Museos y monumentos",
+     "Flamenco",
+     "Naturaleza",
+     "Noche",
+     "Evento con fecha"
+    ]
+   },
+   {
+    "type": "d",
+    "name": "fecha",
+    "label": "Fecha del evento",
+    "icon": "ph-calendar-blank"
+   }
+  ],
+  "4": [
+   {
+    "type": "s",
+    "name": "idioma",
+    "label": "Idioma",
+    "icon": "ph-translate",
+    "options": [
+     "Español",
+     "English",
+     "Français",
+     "Deutsch"
+    ]
+   },
+   {
+    "type": "s",
+    "name": "duracion",
+    "label": "Duración",
+    "icon": "ph-clock",
+    "options": [
+     "Cualquiera",
+     "Menos de 2 horas",
+     "De 2 a 4 horas",
+     "Más de 4 horas"
+    ]
+   }
+  ],
+  "5": [
+   {
+    "type": "s",
+    "name": "tipo",
+    "label": "Tipo de alojamiento",
+    "icon": "ph-house-line",
+    "options": [
+     "Cualquiera",
+     "Casa rural",
+     "Casa cueva",
+     "Camping"
+    ]
+   },
+   {
+    "type": "s",
+    "name": "servicios",
+    "label": "Servicios",
+    "icon": "ph-list-checks",
+    "options": [
+     "Cualquiera",
+     "Aparcamiento",
+     "Admite mascotas",
+     "Accesible",
+     "Piscina"
+    ]
+   }
+  ],
+  "6": [
+   {
+    "type": "s",
+    "name": "edad",
+    "label": "Edad de los niños",
+    "icon": "ph-baby",
+    "options": [
+     "Cualquiera",
+     "0 a 3 años",
+     "4 a 7 años",
+     "8 a 12 años",
+     "Adolescentes"
+    ]
+   },
+   {
+    "type": "s",
+    "name": "tipo",
+    "label": "Tipo de plan",
+    "icon": "ph-tree",
+    "options": [
+     "Cualquiera",
+     "Al aire libre",
+     "En interior",
+     "Plan gratuito"
+    ]
+   }
+  ]
+ }
+}
