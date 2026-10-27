@@ -2,16 +2,19 @@ import mapa from '@/content/mapa.json';
 import { PLACES, slugOf } from '@/lib/data';
 
 type Pt = [number, number];
-export type MapProvince = { name: string; slug: string; d: string; count: number };
+export type MapProvince = {
+  name: string; slug: string; d: string; count: number;
+  /** Categorías con fichas, ya redactadas («Alojamientos, restaurantes y actividades»). */
+  summary: string;
+  photo?: { src: string; alt: string; credit: string };
+};
 export type MapLabel = { name: string; x: number; y: number; size: number };
 export type MapData = {
   w: number; h: number;
-  lon: [number, number][]; lat: [number, number][];
   provinces: MapProvince[];
-  dots: Pt[];
+  /** Posición de cada ficha, agrupada por provincia. */
+  points: Record<string, Pt[]>;
   labels: MapLabel[];
-  /** Puntos de cada provincia en el orden en que se recorre la ruta (uno solo: anillo; varios: línea). */
-  routes: Record<string, Pt[]>;
 };
 
 const [lon0, lat1, k, S, pad] = mapa.o as number[];
@@ -60,30 +63,28 @@ function placeLabels(provs: { n: string; d: string; c: Pt }[], dots: Pt[]): MapL
   });
 }
 
-// Ordena los puntos con el vecino más próximo, empezando por el más occidental.
-function routeOf(pts: Pt[]): Pt[] {
-  const left = [...pts];
-  if (left.length < 2) return left;
-  const out = [left.splice(left.reduce((b, p, j) => (p[0] < left[b][0] ? j : b), 0), 1)[0]];
-  while (left.length) {
-    const l = out[out.length - 1];
-    const j = left.reduce((b, p, m) => (Math.hypot(p[0] - l[0], p[1] - l[1]) < Math.hypot(left[b][0] - l[0], left[b][1] - l[1]) ? m : b), 0);
-    out.push(left.splice(j, 1)[0]);
-  }
-  return out;
+const CAT_NAMES: Record<string, string> = { alojamientos: 'alojamientos', restaurantes: 'restaurantes', actividades: 'actividades' };
+const PHOTOS: Record<string, { src: string; alt: string; credit: string }> = {
+  Granada: { src: '/img/hero-alhambra-panorama.webp', alt: 'Panorámica de la Alhambra con Sierra Nevada al fondo', credit: 'Adam Jones · CC BY-SA 3.0' },
+};
+
+function summaryOf(name: string) {
+  const cats = ['alojamientos', 'restaurantes', 'actividades'].filter((c) => PLACES.some((p) => p.prov === name && p.cat === c)).map((c) => CAT_NAMES[c]);
+  const text = cats.length > 1 ? `${cats.slice(0, -1).join(', ')} y ${cats[cats.length - 1]}` : cats[0] ?? '';
+  return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
 export function buildMapData(): MapData {
   const provs = mapa.provs as { n: string; d: string; c: Pt }[];
-  const dots = PLACES.map((p): Pt => [px(p.lng), py(p.lat)]);
-  const routes: Record<string, Pt[]> = {};
-  for (const q of provs) routes[q.n] = routeOf(PLACES.filter((p) => p.prov === q.n).map((p): Pt => [px(p.lng), py(p.lat)]));
+  const all = PLACES.map((p): Pt => [px(p.lng), py(p.lat)]);
+  const points: Record<string, Pt[]> = {};
+  for (const q of provs) points[q.n] = PLACES.filter((p) => p.prov === q.n).map((p): Pt => [px(p.lng), py(p.lat)]);
   return {
     w: mapa.w, h: mapa.h,
-    lon: mapa.lon as [number, number][], lat: mapa.lat as [number, number][],
-    provinces: provs.map((q) => ({ name: q.n, slug: slugOf(q.n), d: q.d, count: PLACES.filter((p) => p.prov === q.n).length })),
-    dots,
-    labels: placeLabels(provs, dots),
-    routes,
+    provinces: provs.map((q) => ({
+      name: q.n, slug: slugOf(q.n), d: q.d, count: PLACES.filter((p) => p.prov === q.n).length, summary: summaryOf(q.n), photo: PHOTOS[q.n],
+    })),
+    points,
+    labels: placeLabels(provs, all),
   };
 }

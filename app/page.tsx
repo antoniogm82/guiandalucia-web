@@ -3,7 +3,7 @@ import BodyClass from '@/components/home/BodyClass';
 import BlogStyles from '@/components/home/BlogStyles';
 import FeaturedRail from '@/components/home/FeaturedRail';
 import Newsletter from '@/components/home/Newsletter';
-import ProvinceMap from '@/components/home/ProvinceMap';
+import ProvinceExplorer from '@/components/home/ProvinceExplorer';
 import RecentActivity from '@/components/home/RecentActivity';
 import SearchCard from '@/components/home/SearchCard';
 import VerifBand from '@/components/home/VerifBand';
@@ -46,20 +46,9 @@ export default function Home() {
         <SearchCard />
       </section>
 
-      <section className="hv-sec mapa-top">
-        <div className="mapa-wrap">
-          <div className="mapa-svg" id="msvg"><ProvinceMap map={map} /></div>
-          <div className="mapa-side">
-            <h2>Elige destino</h2>
-            <p>Elige una provincia para ver sus planes. Todas tienen fichas de ejemplo para que veas cómo queda la guía.</p>
-            <ul className="mapa-leg" aria-label="Leyenda del mapa">
-              <li><span className="sw sw-d" aria-hidden="true" />Provincia seleccionada · cambia al pasar el ratón</li>
-              <li><span className="dt-sw" aria-hidden="true" />Cada punto es una ficha de ejemplo</li>
-            </ul>
-            <Link className="link" href="/buscar">Ver todas las fichas</Link>
-            <p className="hs-cr">Contornos © colaboradores de OpenStreetMap (ODbL). Los puntos son fichas de ejemplo.</p>
-          </div>
-        </div>
+      <section className="hv-sec mapa-top" aria-labelledby="mx-h">
+        <h2 className="sr" id="mx-h">Elige una provincia</h2>
+        <ProvinceExplorer map={map} />
       </section>
 
       <RecentActivity />
