@@ -42,7 +42,8 @@ export default function Home() {
     <div className="wrap">
       <BodyClass name="is-home" />
       <section className="xhero">
-        <h1>¿Qué hacer en Andalucía?</h1>
+        <h1>Descubre Andalucía</h1>
+        <p className="xhero-claim">Ocho provincias, mil maneras de vivirla.</p>
         <SearchCard />
       </section>
 

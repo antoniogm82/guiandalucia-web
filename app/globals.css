@@ -1071,3 +1071,7 @@ footer .fsoc-l{margin-top:18px;color:var(--fg);font-weight:500;font-size:.92rem}
 @keyframes mx-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @keyframes mk-in{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
 @media (max-width:900px){.mx{grid-template-columns:1fr}}
+
+/* claim bajo el titular de la portada */
+.xhero-claim{margin:14px auto 0;max-width:46ch;font-size:clamp(1rem,1.7vw,1.25rem);font-weight:400;line-height:1.35;color:var(--ink-2);text-wrap:balance}
+.xhero-claim+.xs{margin-top:clamp(20px,3vw,30px)}
