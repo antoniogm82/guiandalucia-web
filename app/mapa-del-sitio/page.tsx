@@ -22,7 +22,9 @@ export default function Page() {
       <h2>Confianza y negocios</h2>
       <ul>
         <li><Link className="link" href="/como-verificamos">Cómo verificamos</Link></li>
-        <li><Link className="link" href="/anadir">Añadir, reclamar o corregir una ficha</Link></li>
+        <li><Link className="link" href="/anadir">Añadir una ficha</Link></li>
+        <li><Link className="link" href="/reclamar">Reclamar o corregir una ficha</Link></li>
+        <li><Link className="link" href="/destacar">Destacar tu ficha</Link></li>
         <li><Link className="link" href="/creditos">Créditos de las fotos</Link></li>
       </ul>
       <h2>La web</h2>

@@ -21,14 +21,14 @@ export default function SiteFooter() {
           <h2 className="fh">Confianza</h2>
           <Link href="/como-verificamos">Cómo verificamos</Link>
           <Link href="/como-verificamos">Publicidad y patrocinios</Link>
-          <Link href="/anadir">Corregir una ficha</Link>
+          <Link href="/reclamar">Corregir una ficha</Link>
           <Link href="/creditos">Créditos de las fotos</Link>
         </div>
         <div>
           <h2 className="fh">Negocios</h2>
           <Link href="/anadir">Añadir tu negocio</Link>
-          <Link href="/anadir">Reclamar una ficha</Link>
-          <Link href="/anadir">Destacar tu ficha</Link>
+          <Link href="/reclamar">Reclamar una ficha</Link>
+          <Link href="/destacar">Destacar tu ficha</Link>
         </div>
       </div>
       <div className="wrap fine">

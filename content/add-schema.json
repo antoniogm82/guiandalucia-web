@@ -1,0 +1,555 @@
+{
+ "types": [
+  {
+   "id": "alojamiento",
+   "label": "Alojamiento",
+   "sub": "Hotel, casa rural, apartamento, casa cueva…",
+   "icon": "ph-bed"
+  },
+  {
+   "id": "restauracion",
+   "label": "Restauración",
+   "sub": "Restaurante, bar de tapas, cafetería…",
+   "icon": "ph-fork-knife"
+  },
+  {
+   "id": "ocio",
+   "label": "Ocio y actividades",
+   "sub": "Visitas guiadas, tours, espectáculos…",
+   "icon": "ph-ticket"
+  },
+  {
+   "id": "tienda",
+   "label": "Tienda o artesanía",
+   "sub": "Comercio local y productos de la tierra",
+   "icon": "ph-storefront"
+  },
+  {
+   "id": "plan",
+   "label": "Plan o ruta gratuita",
+   "sub": "Rutas, miradores, eventos gratuitos…",
+   "icon": "ph-signpost"
+  },
+  {
+   "id": "guia",
+   "label": "Guía o artículo",
+   "sub": "Colaboración editorial",
+   "icon": "ph-article"
+  }
+ ],
+ "schema": {
+  "alojamiento": {
+   "t": "tu alojamiento",
+   "f": [
+    {
+     "k": "t",
+     "n": "nombre",
+     "l": "Nombre del alojamiento",
+     "r": 1,
+     "w": 2
+    },
+    {
+     "k": "s",
+     "n": "tipo",
+     "l": "Tipo",
+     "r": 1,
+     "o": [
+      "Hotel",
+      "Hostal o pensión",
+      "Apartamento turístico",
+      "Casa rural",
+      "Casa cueva",
+      "Camping",
+      "Otro"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "registro",
+     "l": "Número de registro de turismo",
+     "h": "Si lo tienes (por ejemplo, el de la Junta de Andalucía), acelera la verificación."
+    },
+    {
+     "k": "t",
+     "n": "municipio",
+     "l": "Municipio",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "direccion",
+     "l": "Dirección",
+     "r": 1
+    },
+    {
+     "k": "p",
+     "n": "telefono",
+     "l": "Teléfono público",
+     "h": "Se publicará si la ficha se aprueba."
+    },
+    {
+     "k": "u",
+     "n": "web",
+     "l": "Web o reservas"
+    },
+    {
+     "k": "n",
+     "n": "plazas",
+     "l": "Habitaciones o plazas",
+     "min": 1
+    },
+    {
+     "k": "c",
+     "n": "servicios",
+     "l": "Servicios",
+     "o": [
+      "Aparcamiento",
+      "Wifi",
+      "Admite mascotas",
+      "Accesible",
+      "Desayuno",
+      "Piscina",
+      "Aire acondicionado"
+     ]
+    },
+    {
+     "k": "a",
+     "n": "descripcion",
+     "l": "¿Qué os hace distintos?",
+     "r": 1,
+     "w": 2,
+     "max": 600,
+     "h": "Con tus palabras, sin copiar de otras webs."
+    }
+   ]
+  },
+  "restauracion": {
+   "t": "tu local",
+   "f": [
+    {
+     "k": "t",
+     "n": "nombre",
+     "l": "Nombre del local",
+     "r": 1,
+     "w": 2
+    },
+    {
+     "k": "s",
+     "n": "tipo",
+     "l": "Tipo",
+     "r": 1,
+     "o": [
+      "Restaurante",
+      "Bar de tapas",
+      "Cafetería",
+      "Heladería o pastelería",
+      "Chiringuito",
+      "Otro"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "cocina",
+     "l": "Cocina o especialidad",
+     "h": "Por ejemplo: tapas granadinas, marisco, vegetariana."
+    },
+    {
+     "k": "t",
+     "n": "municipio",
+     "l": "Municipio",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "direccion",
+     "l": "Dirección",
+     "r": 1
+    },
+    {
+     "k": "p",
+     "n": "telefono",
+     "l": "Teléfono público",
+     "h": "Se publicará si la ficha se aprueba."
+    },
+    {
+     "k": "u",
+     "n": "web",
+     "l": "Web, carta o reservas"
+    },
+    {
+     "k": "t",
+     "n": "horario",
+     "l": "Horario",
+     "h": "Por ejemplo: martes a domingo, 13:00 a 16:30 y 20:00 a 23:30."
+    },
+    {
+     "k": "s",
+     "n": "precio",
+     "l": "Precio medio por persona",
+     "o": [
+      "Menos de 15 €",
+      "15 a 30 €",
+      "30 a 50 €",
+      "Más de 50 €"
+     ]
+    },
+    {
+     "k": "s",
+     "n": "reserva",
+     "l": "Reserva",
+     "o": [
+      "No hace falta",
+      "Recomendable",
+      "Imprescindible"
+     ]
+    },
+    {
+     "k": "c",
+     "n": "servicios",
+     "l": "Opciones",
+     "o": [
+      "Terraza",
+      "Opciones sin gluten",
+      "Opciones vegetarianas",
+      "Accesible",
+      "Admite mascotas"
+     ]
+    },
+    {
+     "k": "a",
+     "n": "descripcion",
+     "l": "¿Qué os hace distintos?",
+     "r": 1,
+     "w": 2,
+     "max": 600
+    }
+   ]
+  },
+  "ocio": {
+   "t": "tu actividad",
+   "f": [
+    {
+     "k": "t",
+     "n": "nombre",
+     "l": "Nombre de la actividad",
+     "r": 1,
+     "w": 2
+    },
+    {
+     "k": "s",
+     "n": "tipo",
+     "l": "Tipo",
+     "r": 1,
+     "o": [
+      "Visita guiada",
+      "Aventura y deporte",
+      "Cultura y museos",
+      "Flamenco y espectáculos",
+      "Naturaleza",
+      "Vida nocturna",
+      "Otro"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "municipio",
+     "l": "Municipio",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "encuentro",
+     "l": "Punto de encuentro",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "duracion",
+     "l": "Duración",
+     "h": "Por ejemplo: 2 horas."
+    },
+    {
+     "k": "n",
+     "n": "precio",
+     "l": "Precio desde (€ por persona)",
+     "min": 0
+    },
+    {
+     "k": "n",
+     "n": "edad",
+     "l": "Edad mínima",
+     "min": 0
+    },
+    {
+     "k": "c",
+     "n": "idiomas",
+     "l": "Idiomas",
+     "o": [
+      "Español",
+      "English",
+      "Français",
+      "Deutsch",
+      "Otro"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "registro",
+     "l": "Registro de turismo o habilitación",
+     "h": "Si aplica (guías oficiales, empresas de turismo activo…)."
+    },
+    {
+     "k": "u",
+     "n": "web",
+     "l": "Web o reservas",
+     "r": 1
+    },
+    {
+     "k": "p",
+     "n": "telefono",
+     "l": "Teléfono público"
+    },
+    {
+     "k": "a",
+     "n": "descripcion",
+     "l": "¿En qué consiste?",
+     "r": 1,
+     "w": 2,
+     "max": 600
+    }
+   ]
+  },
+  "tienda": {
+   "t": "tu tienda",
+   "f": [
+    {
+     "k": "t",
+     "n": "nombre",
+     "l": "Nombre de la tienda",
+     "r": 1,
+     "w": 2
+    },
+    {
+     "k": "s",
+     "n": "tipo",
+     "l": "Tipo",
+     "r": 1,
+     "o": [
+      "Artesanía",
+      "Alimentación y productos locales",
+      "Moda y complementos",
+      "Regalos y recuerdos",
+      "Otro"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "vende",
+     "l": "¿Qué vendéis?",
+     "r": 1,
+     "h": "Por ejemplo: cerámica de Fajalauza, aceite de oliva."
+    },
+    {
+     "k": "t",
+     "n": "municipio",
+     "l": "Municipio",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "direccion",
+     "l": "Dirección",
+     "r": 1
+    },
+    {
+     "k": "p",
+     "n": "telefono",
+     "l": "Teléfono público"
+    },
+    {
+     "k": "u",
+     "n": "web",
+     "l": "Web o tienda online"
+    },
+    {
+     "k": "t",
+     "n": "horario",
+     "l": "Horario"
+    },
+    {
+     "k": "s",
+     "n": "envios",
+     "l": "Envíos",
+     "o": [
+      "Solo en tienda",
+      "Envíos en España",
+      "Envíos internacionales"
+     ]
+    },
+    {
+     "k": "a",
+     "n": "descripcion",
+     "l": "Cuéntanos qué la hace especial",
+     "r": 1,
+     "w": 2,
+     "max": 600
+    }
+   ]
+  },
+  "plan": {
+   "t": "tu plan",
+   "f": [
+    {
+     "k": "t",
+     "n": "nombre",
+     "l": "Título del plan o ruta",
+     "r": 1,
+     "w": 2
+    },
+    {
+     "k": "s",
+     "n": "tipo",
+     "l": "Tipo",
+     "r": 1,
+     "o": [
+      "Ruta a pie",
+      "Mirador o rincón",
+      "Plan en familia",
+      "Evento gratuito",
+      "Visita libre",
+      "Otro"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "municipio",
+     "l": "Municipio o zona",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "inicio",
+     "l": "Punto de inicio o lugar",
+     "r": 1
+    },
+    {
+     "k": "t",
+     "n": "duracion",
+     "l": "Duración aproximada"
+    },
+    {
+     "k": "s",
+     "n": "dificultad",
+     "l": "Dificultad",
+     "o": [
+      "No aplica",
+      "Fácil",
+      "Media",
+      "Alta"
+     ]
+    },
+    {
+     "k": "t",
+     "n": "fecha",
+     "l": "Fecha u horario",
+     "h": "Si es un evento o solo ocurre en ciertas fechas."
+    },
+    {
+     "k": "u",
+     "n": "fuente",
+     "l": "Enlace de la fuente",
+     "h": "Web oficial, ayuntamiento u organizador. Nos ayuda a verificarlo."
+    },
+    {
+     "k": "c",
+     "n": "apto",
+     "l": "Apto para",
+     "o": [
+      "Niños",
+      "Accesible",
+      "Perros"
+     ]
+    },
+    {
+     "k": "a",
+     "n": "descripcion",
+     "l": "Describe el plan",
+     "r": 1,
+     "w": 2,
+     "max": 600
+    }
+   ]
+  },
+  "guia": {
+   "t": "tu propuesta",
+   "f": [
+    {
+     "k": "t",
+     "n": "nombre",
+     "l": "Título propuesto",
+     "r": 1,
+     "w": 2
+    },
+    {
+     "k": "t",
+     "n": "tema",
+     "l": "Tema",
+     "r": 1,
+     "h": "Por ejemplo: qué ver en Guadix en un día."
+    },
+    {
+     "k": "t",
+     "n": "municipio",
+     "l": "Provincia o municipio",
+     "r": 1
+    },
+    {
+     "k": "u",
+     "n": "borrador",
+     "l": "Enlace al borrador",
+     "h": "Documento compartido o web donde podamos leerlo."
+    },
+    {
+     "k": "s",
+     "n": "extension",
+     "l": "Extensión aproximada",
+     "o": [
+      "Menos de 500 palabras",
+      "500 a 1.000 palabras",
+      "Más de 1.000 palabras"
+     ]
+    },
+    {
+     "k": "a",
+     "n": "descripcion",
+     "l": "Resumen de la guía",
+     "r": 1,
+     "w": 2,
+     "max": 800,
+     "h": "Qué cubre y qué aporta que no esté ya publicado."
+    },
+    {
+     "k": "c",
+     "n": "autoria",
+     "l": "Autoría",
+     "o": [
+      "El texto es original y de mi autoría",
+      "Puedo ceder el derecho a publicarlo en la web"
+     ],
+     "r": 1
+    }
+   ]
+  }
+ },
+ "photos": {
+  "max": 6,
+  "mb": 1,
+  "minW": 1200,
+  "minH": 800,
+  "types": [
+   "image/jpeg",
+   "image/png",
+   "image/webp"
+  ]
+ }
+}
