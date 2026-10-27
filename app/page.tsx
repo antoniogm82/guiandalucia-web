@@ -1,8 +1,8 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: 'system-ui, sans-serif', padding: '4rem 1.5rem', maxWidth: 640, margin: '0 auto' }}>
-      <h1>¿Qué hacer en Andalucía?</h1>
-      <p>Guía Andalucía. Sitio en construcción.</p>
-    </main>
+    <div className="wrap" style={{ paddingTop: 48, paddingBottom: 80 }}>
+      <div className="rhead"><h1>¿Qué hacer en Andalucía?</h1></div>
+      <p className="muted" style={{ marginTop: 12 }}>La portada llega en el siguiente paso de la migración.</p>
+    </div>
   );
 }
